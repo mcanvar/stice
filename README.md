@@ -1,2 +1,2 @@
 # stice
-Special Topics in Computer Engineering II Curse PHP - CodeIgniter Works
+Special Topics in Computer Engineering II Course PHP - CodeIgniter Works
