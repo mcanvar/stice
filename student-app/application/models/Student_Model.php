@@ -1,4 +1,9 @@
 <?php
+/*
+	* Author: mevlutcanvar@gmail.com
+*/
+?>
+<?php
 class Student_Model extends CI_Model {
 
 	function __construct() {
@@ -11,6 +16,13 @@ class Student_Model extends CI_Model {
       return $query->result();
   }
 
+  public function get_student($id)
+  {
+    $this->db->where('id', $id);
+    if( $query = $this->db->get("student") )
+      return $query->result();
+  }
+
   public function insert_student($data)
   {
     if ($this->db->insert('student', $data))
@@ -19,15 +31,9 @@ class Student_Model extends CI_Model {
 
   public function delete_student($id)
   {
-    if ( $this->db->delete('student', "id=".$id ))
+		$this->db->where('id', $id);
+    if ( $this->db->delete('student'))
       return true;
-  }
-
-  public function get_student($id)
-  {
-    $this->db->where('id', $id);
-    if( $query = $this->db->get("student") )
-      return $query->result();
   }
 
   public function update_student($data)

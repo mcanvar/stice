@@ -1,4 +1,8 @@
-
+<?php
+/*
+	* Author: mevlutcanvar@gmail.com
+*/
+?>
 <body>
 
 <div id="container">
@@ -12,21 +16,11 @@
 			<table>
 				<thead>
 					<tr>
-						<th>
-							Student ID
-						</th>
-						<th>
-							Name
-						</th>
-						<th>
-							Surname
-						</th>
-						<th>
-							Gender
-						</th>
-						<th>
-							Process
-						</th>
+						<th>Student ID</th>
+						<th>Name</th>
+						<th>Surname</th>
+						<th>Gender</th>
+						<th>Process</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -39,7 +33,7 @@
 								<?php echo anchor(site_url("student/".$student->id), $student->name); ?>
 							</td>
 							<td>
-								<?php echo $student->surname; ?>
+								<?php echo anchor(site_url("student/".$student->id), $student->surname); ?>
 							</td>
 							<td>
 								<?php echo $student->gender; ?>
